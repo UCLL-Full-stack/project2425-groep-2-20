@@ -5,4 +5,4 @@ With the simple workout planner we want users to be able to make and
 store different workout programs, these workout programs have different workouts
 each day which each have different exercises.
 
-### \Axel Jacobs\
+### Axel Jacobs

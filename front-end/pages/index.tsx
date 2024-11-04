@@ -1,7 +1,12 @@
+import Header from "@components/Header"
+
 const Home: React.FC = () => {
     return (
         <>
-            <p className="text-2xl">Home</p>
+            <Header/>
+            <main className="h-screen">
+            <p className="text-2xl text-center">Simple Workout Planner</p>
+            </main>
         </>
     )
 }

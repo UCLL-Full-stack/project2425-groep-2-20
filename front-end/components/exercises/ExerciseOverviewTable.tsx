@@ -16,8 +16,8 @@ const ExerciseOverviewTable: React.FC<Props> = ({ exercises }: Props) => {
           </tr>
         </thead>
         <tbody>
-          {exercises.map((exercise, index) => (
-            <tr key={index} className={`border-b ${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}>
+          {exercises.map((exercise) => (
+            <tr key={exercise.id} className="border-b bg-gray-50">
               <td className="px-4 py-3 font-semibold text-gray-800">{exercise.name}</td>
               <td className="px-4 py-3 text-gray-600">{exercise.sets} Sets</td>
               <td className="px-4 py-3 text-gray-600">{exercise.reps} Repetitions</td>

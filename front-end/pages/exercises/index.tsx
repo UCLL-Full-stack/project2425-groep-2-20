@@ -1,6 +1,7 @@
 import Header from "@components/Header";
 import ExerciseOverviewTable from "@components/exercises/ExerciseOverviewTable";
-import ExerciseService from "@services/exerciseService";
+import ExerciseService from "@services/ExerciseService";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Head from "next/head";
 import useSWR from "swr";
 
@@ -28,6 +29,16 @@ const Exercises: React.FC = () => {
             </main>
         </>
     );
+}
+
+export const getServerSideProps = async (context) => {
+    const {locale} = context;
+
+    return {
+        props: {
+            ...(await serverSideTranslations(locale ?? "en", ["common"]))
+        },
+    };
 }
 
 export default Exercises

@@ -1,4 +1,5 @@
 import Header from "@components/Header"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const Home: React.FC = () => {
     return (
@@ -9,6 +10,16 @@ const Home: React.FC = () => {
             </main>
         </>
     )
+}
+
+export const getServerSideProps = async (context) => {
+    const {locale} = context;
+
+    return {
+        props: {
+            ...(await serverSideTranslations(locale ?? "en", ["common"]))
+        },
+    };
 }
 
 export default Home

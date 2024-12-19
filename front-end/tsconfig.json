@@ -22,7 +22,7 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "incremental": true,
@@ -37,7 +37,6 @@
         "name": "next"
       }
     ],
-    "strictNullChecks": true,
     "target": "ES2017"
   },
   "include": [

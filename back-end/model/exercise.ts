@@ -1,3 +1,4 @@
+import { Exercise as ExercisePrisma } from '@prisma/client';
 export class Exercise {
     private id?: number;
     private name: string;
@@ -41,5 +42,19 @@ export class Exercise {
 
     public setReps(reps: number): void {
         this.reps = reps;
+    }
+
+    static from({
+        id,
+        name,
+        sets,
+        reps,
+    }:ExercisePrisma ){
+        return new Exercise({
+            id,
+            name,
+            sets,
+            reps
+        })
     }
 }

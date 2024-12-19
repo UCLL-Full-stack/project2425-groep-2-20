@@ -1,8 +1,8 @@
 import { Exercise } from "../model/exercise";
 import exerciseDb from "../repository/exercise.db";
 
-const getAllExercises = (): Exercise[] => {
-    const exercises = exerciseDb.getAllExercises();
+const getAllExercises = async (): Promise<Exercise[]> => {
+    const exercises = await exerciseDb.getAllExercises();
     return exercises;
 };
 

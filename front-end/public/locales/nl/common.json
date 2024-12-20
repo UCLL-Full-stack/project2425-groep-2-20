@@ -1,24 +1,44 @@
 {
-  "app.title": "Courses App",
-  "general.error": "An error has occurred. Please try again later.",
+  "app.title": "Cursussen App",
+  "general.error": "Er is een fout opgetreden. Probeer het later opnieuw.",
   "login": {
-    "title": "Login",
-    "button": "Login",
-    "success": "Login succesful. Redirecting to homepage...",
+    "title": "Inloggen",
+    "button": "Inloggen",
+    "success": "Inloggen succesvol. Wordt doorgestuurd naar de homepage...",
     "validate": {
-      "name": "Name is required",
-      "password": "Password is required"
+      "name": "Naam is verplicht",
+      "password": "Wachtwoord is verplicht"
     },
-    "label": { "username": "Username:", "password": "Password:" }
+    "label": { 
+      "username": "Gebruikersnaam:", 
+      "password": "Wachtwoord:" 
+    }
   },
   "header": {
-    "welcome": "Welcome",
+    "welcome": "Welkom",
     "nav": {
       "home": "Home",
-      "lecturers": "Lecturers",
-      "schedules": "Schedules",
-      "login": "Login",
-      "logout": "Logout"
+      "programs": "Programmas",
+      "exercises": "Oefeningen",
+      "lecturers": "Docenten",
+      "schedules": "Roosters",
+      "login": "Inloggen",
+      "logout": "Uitloggen"
+    }
+  },
+  "exercise": {
+    "title": "Oefening Toevoegen",
+    "button": "Oefening Toevoegen",
+    "added": "Oefening succesvol toegevoegd!",
+    "validate": {
+      "name": "Oefeningsnaam is verplicht",
+      "sets": "Sets moeten groter zijn dan 0",
+      "reps": "Herhalingen moeten groter zijn dan 0"
+    },
+    "label": {
+      "name": "Oefeningsnaam:",
+      "sets": "Sets:",
+      "reps": "Herhalingen:"
     }
   }
 }

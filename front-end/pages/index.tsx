@@ -6,7 +6,9 @@ const Home: React.FC = () => {
         <>
             <Header/>
             <main className="h-screen">
-            <p className="text-2xl text-center">Simple Workout Planner</p>
+            <p className="text-2xl text-center">
+                        Add Exercises and make workouts. <br />
+                    </p>
             </main>
         </>
     )

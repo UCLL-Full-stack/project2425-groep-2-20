@@ -26,8 +26,19 @@ const main = async () => {
             password: await bcrypt.hash('user2', 12),
             firstName: 'user',
             lastName: 'persoon',
-            email: 'user@ucll.be',
+            email: 'user2@ucll.be',
             role: 'user',
+        },
+    });
+
+    const reader = await prisma.user.create({
+        data: {
+            username: 'user3',
+            password: await bcrypt.hash('user3', 12),
+            firstName: 'reader',
+            lastName: 'persoon',
+            email: 'user3@ucll.be',
+            role: 'reader',
         },
     });
 

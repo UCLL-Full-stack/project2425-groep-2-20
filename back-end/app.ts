@@ -4,7 +4,7 @@ import cors from 'cors';
 import * as bodyParser from 'body-parser';
 import swaggerJSDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
-import exerciseRouter from './controller/exercise.controller';
+import exerciseRouter from './controller/exercise.routes';
 import { userRouter } from './controller/user.routes';
 import programRouter from './controller/program.routes';
 

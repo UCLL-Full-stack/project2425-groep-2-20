@@ -23,7 +23,7 @@ const ProgramOverviewTable: React.FC<Props> = ({ programs }: Props) => {
           {programs.map((program) => (
             <tr
               key={program.id}
-              className="cursor-pointer hover:bg-gray-100"
+              className="cursor-pointer hover:bg-blue-400"
               onClick={() => setSelectedProgram(program.id === selectedProgram ? null : program.id)}
             >
               <td className="border border-gray-300 px-4 py-2">{program.name}</td>

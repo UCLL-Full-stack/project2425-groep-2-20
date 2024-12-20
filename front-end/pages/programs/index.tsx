@@ -20,7 +20,7 @@ const Programs: React.FC = () => {
                 <title>Programs</title>
             </Head>
             <Header />
-            <main className="flex flex-column justify-center align-items-center h-screen text-gray-100 align-middle">
+            <main className="flex flex-column justify-center align-items-center text-gray-100 align-middle">
                 <section className="bg-gray-600 h-3/5 rounded-md m-2 p-2">
                     <h2>Programs overview</h2>
                     {error && <p>Error</p>}

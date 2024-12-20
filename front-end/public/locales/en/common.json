@@ -4,21 +4,41 @@
   "login": {
     "title": "Login",
     "button": "Login",
-    "success": "Login succesful. Redirecting to homepage...",
+    "success": "Login successful. Redirecting to homepage...",
     "validate": {
       "name": "Name is required",
       "password": "Password is required"
     },
-    "label": { "username": "Username:", "password": "Password:" }
+    "label": { 
+      "username": "Username:", 
+      "password": "Password:" 
+    }
   },
   "header": {
     "welcome": "Welcome",
     "nav": {
       "home": "Home",
+      "programs": "Programs",
+      "exercises": "Exercises",
       "lecturers": "Lecturers",
       "schedules": "Schedules",
       "login": "Login",
       "logout": "Logout"
+    }
+  },
+  "exercise": {
+    "title": "Add Exercise",
+    "button": "Add Exercise",
+    "added": "Exercise added successfully!",
+    "validate": {
+      "name": "Exercise name is required",
+      "sets": "Sets must be greater than 0",
+      "reps": "Reps must be greater than 0"
+    },
+    "label": {
+      "name": "Exercise Name:",
+      "sets": "Sets:",
+      "reps": "Reps:"
     }
   }
 }

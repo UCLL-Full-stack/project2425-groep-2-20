@@ -1,5 +1,6 @@
 import { Exercise } from "./exercise";
-
+import { Workout as WorkoutPrisma } from '@prisma/client';
+import {Exercise as ExercisePrisma } from '@prisma/client';
 export class Workout {
     private id?: number;
     private name: string;
@@ -34,4 +35,10 @@ export class Workout {
     public setExercises(exercises: Exercise[]): void {
         this.exercises = exercises;
     }
+
+    static from({ id, name, exercises }: WorkoutPrisma & { exercises: ExercisePrisma[] }): Workout {
+        const mappedExercises = exercises.map(Exercise.from);
+        return new Workout(name, mappedExercises, id);
+    }
+    
 }

@@ -44,17 +44,8 @@ export class Exercise {
         this.reps = reps;
     }
 
-    static from({
-        id,
-        name,
-        sets,
-        reps,
-    }:ExercisePrisma ){
-        return new Exercise({
-            id,
-            name,
-            sets,
-            reps
-        })
+    static from({ id, name, sets, reps }: ExercisePrisma): Exercise {
+        return new Exercise({ id, name, sets, reps });
     }
+    
 }

@@ -22,31 +22,31 @@ const Header: React.FC = () => {
         Simple Workout Planner
       </a>
       <nav className="flex justify-center">
-        <Link href="/" className="nav-link px-4 fs-5 text-white">
+        <Link href="/" className="px-4 text-white hover:bg-blue-400 rounded-md">
           Home
         </Link>
-        <Link href="/exercises" className="nav-link px-4 fs-5 text-white">
+        <Link href="/exercises" className="px-4 text-white hover:bg-blue-400 rounded-md">
           Exercises
         </Link>
         {!loggedInUser && (
           <Link
             href="/login"
-            className="px-4 text-white text-xl hover:bg-gray-600 rounded-lg"
+            className="px-4 text-white hover:bg-blue-400 rounded-md"
           >
             {t('header.nav.login')}
           </Link>
         )}
         {loggedInUser && (
-          <a
+          <Link
             href="/login"
             onClick={handleClick}
-            className="px-4 text-white text-xl hover:bg-gray-600 rounded-lg"
+            className="px-4 text-white hover:bg-blue-400 rounded-md"
           >
             {t('header.nav.logout')}
-          </a>
+          </Link>
         )}
         {loggedInUser && (
-          <div className="text-white ms-5 mt-2 md:mt-0 pt-1 md:pt-0 grow">
+          <div className="px-4 text-white">
             Welcome, {loggedInUser.fullname}!
           </div>
         )}

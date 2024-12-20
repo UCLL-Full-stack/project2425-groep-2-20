@@ -1,8 +1,21 @@
 export type Exercise = {
-    id: number;
-  name: string;
-  sets: number;
-  reps: number;
+  id?: number;
+  name?: string;
+  sets?: number;
+  reps?: number;
+}
+
+export type Program = {
+  id?: number;
+  name?: string;
+  days?: number;
+  workouts?: Workout[];
+}
+
+export type Workout = {
+  id?: number;
+  name?: string;
+  exercises?: Exercise[];
 }
 
 export type User = {

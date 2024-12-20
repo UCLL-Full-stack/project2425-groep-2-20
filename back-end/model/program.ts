@@ -1,5 +1,7 @@
 import { Workout } from "./workout";
-
+import { Workout as WorkoutPrisma } from '@prisma/client';
+import {Exercise as ExercisePrisma } from '@prisma/client';
+import {Program as ProgramPrisma } from '@prisma/client';
 export class Program {
     private id?: number;
     private name: string;
@@ -44,4 +46,10 @@ export class Program {
     public setDays(days: number): void {
         this.days = days;
     }
+
+    static from({ id, name, days, workouts }: ProgramPrisma & { workouts: (WorkoutPrisma & { exercises: ExercisePrisma[] })[] }): Program {
+        const mappedWorkouts = workouts.map(Workout.from);
+        return new Program(name, mappedWorkouts, days, id);
+    }
+    
 }
